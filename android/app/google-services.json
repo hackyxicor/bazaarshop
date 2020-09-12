@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "584452789710",
+    "firebase_url": "https://bazaarindia-4e6a4.firebaseio.com",
+    "project_id": "bazaarindia-4e6a4",
+    "storage_bucket": "bazaarindia-4e6a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584452789710:android:52802c6fab204fc3de479f",
+        "android_client_info": {
+          "package_name": "com.bazaarshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584452789710-37gfbiuaub5tkil99ifqbjl94khp8uj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2wZiiaNJPVsxCafsI-vcuRPxkrdPE3F0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584452789710-37gfbiuaub5tkil99ifqbjl94khp8uj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
