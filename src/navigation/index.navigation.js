@@ -10,14 +10,43 @@ import { navigationRef, isReadyRef } from '../services/navigation.service';
 
 //Screens 
 import SplashScreen from '../scenes/splashScene/splash.scene';
+import LoginScene from '../scenes/loginScene/login.scene';
+import HomeScene from '../scenes/homeScene/home.scene';
+
+import Tabbar from '../components/Tabbar/tabbar.component';
 
 //Components
 // import TabBar from '../components/tabBar';
-
-const Stack = createStackNavigator();
-
 enableScreens();
 
+const Stack = createStackNavigator();
+const Tabs = createBottomTabNavigator();
+
+function TabsNavigator() {
+  return (
+    <Tabs.Navigator
+      initialRouteName="Home"
+      tabBar={(props) => <Tabbar {...props} />}
+    >
+      <Tabs.Screen
+        name="Home"
+        component={HomeScene}
+      />
+      <Tabs.Screen
+        name="Categories"
+        component={LoginScene}
+      />
+      <Tabs.Screen
+        name="Bag"
+        component={LoginScene}
+      />
+      <Tabs.Screen
+        name="Orders"
+        component={LoginScene}
+      />
+    </Tabs.Navigator>
+  )
+}
 
 function RootNavigator() {
   React.useEffect(() => {
@@ -32,12 +61,17 @@ function RootNavigator() {
       }}
     >
       <Stack.Navigator
-        initialRouteName="Splash"
+        initialRouteName="TabsNavigator"
       >
         <Stack.Screen
           options={{ headerShown: false }}
-          name="Splash"
-          component={SplashScreen}
+          name="Tabs"
+          component={TabsNavigator}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Login"
+          component={LoginScene}
         />
       </Stack.Navigator>
     </NavigationContainer>
